@@ -1,9 +1,9 @@
 {
     "template": "report_list_macros",
-    "description": "",
+    "description": "Add inline moderation checkboxes",
     "execution_order": 10,
     "enabled": true,
     "action": "str_replace",
     "find": "{{ $report.getReportState() }}",
-    "replace": "{{ $report.getReportState() }}\n<xf:if is=\"$report.canTcInlineModReport()\">\n\t<span class=\"actionBar-action actionBar-action--inlineMod\">\n\t\t<xf:checkbox standalone=\"true\">\n\t\t\t<xf:option value=\"{$report.report_id}\"\n\t\t\t\t\t   class=\"js-inlineModToggle\"\n\t\t\t\t\t   data-xf-init=\"tooltip\"\n\t\t\t\t\t   title=\"{{ phrase('select_for_moderation') }}\"\n\t\t\t\t\t   label=\"{{ phrase('select_for_moderation') }}\"\n\t\t\t\t\t   hiddenlabel=\"true\" />\n\t\t</xf:checkbox>\n\t</span>\n</xf:if>"
+    "replace": "$0\n<xf:if is=\"$xf.visitor.canTcInlineModReport()\">\n\t<span class=\"actionBar-action actionBar-action--inlineMod\">\n\t\t<xf:checkbox standalone=\"true\">\n\t\t\t<xf:option value=\"{$report.report_id}\"\n\t\t\t\t\t   class=\"js-inlineModToggle\"\n\t\t\t\t\t   data-xf-init=\"tooltip\"\n\t\t\t\t\t   title=\"{{ phrase('select_for_moderation') }}\"\n\t\t\t\t\t   label=\"{{ phrase('select_for_moderation') }}\"\n\t\t\t\t\t   hiddenlabel=\"true\" />\n\t\t</xf:checkbox>\n\t</span>\n</xf:if>"
 }

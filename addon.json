@@ -1,14 +1,21 @@
 {
     "legacy_addon_id": "",
     "title": "[TC] Moderator Tools Improvements",
-    "description": "",
+    "description": "Adds useful things for moderator & admin",
     "version_id": 2000070,
     "version_string": "2.0.0",
-    "dev": "",
-    "dev_url": "",
+    "dev": "TeslaCloud Studios LLC",
+    "dev_url": "https://teslacloud.net",
     "faq_url": "",
-    "support_url": "",
-    "extra_urls": [],
-    "require": [],
-    "icon": ""
+    "support_url": "https://teslacloud.net/forums/xf-addon_mit/",
+    "extra_urls": {
+        "inzanty": "https://teslacloud.net/members/inzanty.213/"
+    },
+    "require": {
+        "XF": [
+            2010070,
+            "XenForo 2.1.0+"
+        ]
+    },
+    "icon": "far fa-user-cog"
 }

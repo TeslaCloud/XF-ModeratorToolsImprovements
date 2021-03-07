@@ -1,9 +1,9 @@
 {
     "template": "reaction_list",
-    "description": "",
+    "description": "Add link to delete action",
     "execution_order": 10,
     "enabled": true,
     "action": "str_replace",
     "find": "<xf:date time=\"{$reaction.reaction_date}\" />",
-    "replace": "<xf:date time=\"{$reaction.reaction_date}\" />\n<br>\n<xf:if is=\"$xf.visitor.canDeleteUserReaction()\">\n\t<a href=\"{{ link('posts/reactions/delete', null, {'reaction': $reaction.reaction_content_id}) }}\" data-xf-click=\"overlay\">{{ phrase('delete') }}</a>\n</xf:if>\n"
+    "replace": "$0\n<br>\n<xf:if is=\"$xf.visitor.canDeleteUserReaction()\">\n\t<a href=\"{{ link('posts/reactions/delete', null, {'reaction': $reaction.reaction_content_id}) }}\" data-xf-click=\"overlay\">{{ phrase('delete') }}</a>\n</xf:if>\n"
 }

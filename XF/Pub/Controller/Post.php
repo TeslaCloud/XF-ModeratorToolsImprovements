@@ -18,14 +18,18 @@ class Post extends XFCP_Post
                 ->where('reaction_content_id', $this->filter('reaction', 'int'))
                 ->fetchOne();
 
-            if (!is_null($reaction))
+            if ($reaction)
             {
                 $reaction->delete();
+
+                $this->app->logger()->logModeratorAction('post', $reaction->Content, 'tc_mit_reaction_delete');
 
                 return $this->redirect($this->getDynamicRedirect());
             }
         }
 
-        return $this->view('XF\Post:Reactions\Delete', 'tc_mti_post_reaction_delete', ['reaction' => $reactionId]);
+        return $this->view('XF\Post:Reactions\Delete', 'tc_mti_post_reaction_delete', [
+            'reaction' => $reactionId
+        ]);
     }
 }

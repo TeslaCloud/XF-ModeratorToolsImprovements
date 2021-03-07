@@ -7,16 +7,13 @@ use XF\Mvc\Entity\Entity;
 
 class Report extends AbstractHandler
 {
-    /**
-     * @return array|\XF\InlineMod\AbstractAction[]
-     */
-    public function getPossibleActions()
+    public function getPossibleActions() : array
     {
         $actions = [];
 
         $actions['reject'] = $this->getSimpleActionHandler(
             \XF::phrase('reject'),
-            'canTcInlineModReport',
+            \XF::visitor()->canTcInlineModReport(),
             function (Entity $entity)
             {
                 /** @var \XF\Entity\Report $entity */
@@ -30,7 +27,7 @@ class Report extends AbstractHandler
 
         $actions['resolve'] = $this->getSimpleActionHandler(
             \XF::phrase('tc_mti_report_resolve'),
-            'canTcInlineModReport',
+            \XF::visitor()->canTcInlineModReport(),
             function (Entity $entity)
             {
                 /** @var \XF\Entity\Report $entity */
@@ -44,7 +41,7 @@ class Report extends AbstractHandler
 
         $actions['unreject'] = $this->getSimpleActionHandler(
             \XF::phrase('tc_mti_report_unreject'),
-            'canTcInlineModReport',
+            \XF::visitor()->canTcInlineModReport(),
             function (Entity $entity)
             {
                 /** @var \XF\Entity\Report $entity */
@@ -58,7 +55,7 @@ class Report extends AbstractHandler
 
         $actions['unresolve'] = $this->getSimpleActionHandler(
             \XF::phrase('tc_mti_report_unresolve'),
-            'canTcInlineModReport',
+            \XF::visitor()->canTcInlineModReport(),
             function (Entity $entity)
             {
                 /** @var \XF\Entity\Report $entity */

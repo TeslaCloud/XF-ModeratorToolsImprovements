@@ -8,14 +8,20 @@ use XF\Mvc\Entity\AbstractCollection;
 
 class Assign extends AbstractAction
 {
-    public function getTitle()
+    public function getTitle() : \XF\Phrase
     {
-        return \XF::phrase('tc_mbi_assign_to');
+        return \XF::phrase('tc_mti_assign_to');
     }
 
+    /**
+     * @param \XF\Mvc\Entity\Entity $entity
+     * @param array $options
+     * @param null $error
+     * @return mixed
+     */
     protected function canApplyToEntity(\XF\Mvc\Entity\Entity $entity, array $options, &$error = null)
     {
-        return $entity->canTcInlineModReport();
+        return \XF::visitor()->canTcInlineModReport();
     }
 
     /**
@@ -25,25 +31,34 @@ class Assign extends AbstractAction
      */
     protected function applyToEntity(\XF\Mvc\Entity\Entity $entity, array $options)
     {
-        if (!$options['user'])
-        {
-            throw new \InvalidArgumentException("Please enter valid user");
-        }
-
         /** @var \XF\Repository\User $userRepo */
         $userRepo = \XF::repository('XF:User');
-        $recipient = $userRepo->getUserByNameOrEmail($options['user']);
+        $user = $userRepo->getUserByNameOrEmail($options['user']);
 
-        if (!$recipient->is_moderator)
+        $entity->assigned_user_id = $user->user_id;
+        $entity->save();
+
+        /** @var \XF\Service\Report\Commenter $commenter */
+        $commenter = \XF::service('XF:Report\Commenter', $entity);
+        $commenter->setMessage(\XF::phrase('tc_mti_report_assigned_to_x', ['username' => $user->username]));
+        $commenter->save();
+
+        if ($options['alert'])
         {
-            throw new \InvalidArgumentException("Recipient is not moderator");
+            $closureNotifier = \XF::service('XF:Report\ClosureNotifier', $entity);
+            $closureNotifier->setAlertType('assign');
+            $closureNotifier->setAlertComment($options['alert_message']);
+            $closureNotifier->notify();
         }
 
-        $entity->assigned_user_id = $recipient->user_id;
-        $entity->save();
         $this->returnUrl = $this->app()->router()->buildLink('reports', $entity);
     }
 
+    /**
+     * @param AbstractCollection $entities
+     * @param \XF\Mvc\Controller $controller
+     * @return \XF\Mvc\Reply\View|null
+     */
     public function renderForm(AbstractCollection $entities, \XF\Mvc\Controller $controller)
     {
         $viewParams = [
@@ -62,7 +77,9 @@ class Assign extends AbstractAction
     public function getFormOptions(AbstractCollection $entities, Request $request)
     {
         $options = [
-            'user' => $request->filter('user', 'str')
+            'user' => $request->filter('user', 'str'),
+            'alert' => $request->filter('alert', 'bool'),
+            'alert_message' => $request->filter('alert_message', 'str')
         ];
 
         return $options;

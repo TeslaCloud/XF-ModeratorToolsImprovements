@@ -1,4 +1,40 @@
 {
+    "mod_log.post_tc_mit_reaction_delete.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "2130ec387e7bd1566b57847c8524ac7b"
+    },
+    "mod_log.user_tc_mit_delete_avatar.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "66e0c9a8621d349a3397a4cde8824a24"
+    },
+    "mod_log.user_tc_mit_delete_banner.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "ac98a15c4e63b94fefaa821a6ae09b42"
+    },
+    "mod_log.user_tc_mit_reactions_delete.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "4a583be5063f0fee9c4e099a14201f25"
+    },
+    "mod_log.user_tc_mit_user_discourage.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "f595817e0f4c34bb7ebf51584ae233e3"
+    },
+    "mod_log.user_tc_mit_user_undiscourage.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "99f6d4010cdd8bcabf52797edde3c537"
+    },
     "permission.forum_tcInlineModReport.txt": {
         "global_cache": false,
         "version_id": 2000070,
@@ -29,7 +65,13 @@
         "version_string": "2.0.0",
         "hash": "71796778b9dfbcd71ce3f9f613c729c9"
     },
-    "tc_mbi_assign_to.txt": {
+    "tc_mit_notify_assigned_user_of_this_report.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "9f460d2a8ef1016278d698dcd36df50d"
+    },
+    "tc_mti_assign_to.txt": {
         "global_cache": false,
         "version_id": 2000070,
         "version_string": "2.0.0",
@@ -100,6 +142,12 @@
         "version_id": 2000070,
         "version_string": "2.0.0",
         "hash": "f83ff6e3d01e0559e1f0291287741e4a"
+    },
+    "tc_mti_report_assigned_to_x.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "bd4e658fd92ac91340a3e3f7927d006f"
     },
     "tc_mti_report_assing_to.txt": {
         "global_cache": false,

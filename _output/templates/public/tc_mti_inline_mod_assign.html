@@ -6,6 +6,14 @@
 			<xf:textboxrow name="user" ac="single" autocomplete="off" 
 						   label="{{ phrase('user') }}"
 						   maxlength="{{ max_length($xf.visitor, 'username') }}" />
+			
+			<xf:checkboxrow>
+				<xf:option name="alert" 
+						   label="{{ phrase('tc_mit_notify_assigned_user_of_this_report') }} {{ phrase('reason:') }}">
+
+					<xf:textbox name="alert_message" placeholder="{{ phrase('optional') }}" />
+				</xf:option>
+			</xf:checkboxrow>
 		</div>
 		<xf:submitrow icon="save" />
 	</div>

@@ -1,6 +1,6 @@
 {
     "template": "member_macros",
-    "description": "Buttons",
+    "description": "Buttons in moderator actions",
     "execution_order": 10,
     "enabled": true,
     "action": "str_replace",

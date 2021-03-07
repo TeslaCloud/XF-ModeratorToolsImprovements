@@ -21,12 +21,21 @@ class Member extends XFCP_Member
             $avatarService = $this->service('XF:User\Avatar', $user);
             $avatarService->deleteAvatar();
 
+            $this->app->logger()->logModeratorAction('user', $user, 'tc_mit_delete_avatar');
+
             return $this->redirect($this->buildLink('members', $user));
         }
 
-        return $this->view('XF:Member\Avatar\Delete', 'tc_mti_member_avatar_delete', ['user' => $user]);
+        return $this->view('XF:Member\Avatar\Delete', 'tc_mti_member_avatar_delete', [
+            'user' => $user
+        ]);
     }
 
+    /**
+     * @param ParameterBag $params
+     * @return \XF\Mvc\Reply\Message|\XF\Mvc\Reply\Redirect|\XF\Mvc\Reply\View
+     * @throws \XF\Mvc\Reply\Exception
+     */
     public function actionDiscourage(ParameterBag $params)
     {
         $user = $this->assertViewableUser($params->user_id);
@@ -38,12 +47,21 @@ class Member extends XFCP_Member
 
         if ($this->isPost())
         {
-            $user->Option->fastUpdate('is_discouraged', !$user->Option->is_discouraged);
+            $newState = !$user->Option->is_discouraged;
+
+            $user->Option->fastUpdate('is_discouraged', $newState);
+
+            $this->app->logger()->logModeratorAction(
+                'user', $user,
+                $newState ? 'tc_mit_user_discourage' : 'tc_mit_user_undiscourage'
+            );
 
             return $this->redirect($this->buildLink('members', $user));
         }
 
-        return $this->view('XF:Member\Discourage', 'tc_mti_member_discourage', ['user' => $user]);
+        return $this->view('XF:Member\Discourage', 'tc_mti_member_discourage', [
+            'user' => $user
+        ]);
     }
 
     /**
@@ -61,10 +79,14 @@ class Member extends XFCP_Member
             $bannerService = $this->service('XF:User\ProfileBanner', $user);
             $bannerService->deleteBanner();
 
+            $this->app->logger()->logModeratorAction('user', $user, 'tc_mit_delete_banner');
+
             return $this->redirect($this->buildLink('members', $user));
         }
 
-        return $this->view('XF:Member\Banner\Delete', 'tc_mti_member_banner_delete', ['user' => $user]);
+        return $this->view('XF:Member\Banner\Delete', 'tc_mti_member_banner_delete', [
+            'user' => $user
+        ]);
     }
 
     /**
@@ -108,9 +130,15 @@ class Member extends XFCP_Member
                 $reaction->delete();
             }
 
+            $this->app->logger()->logModeratorAction('user', $user, 'tc_mit_reactions_delete', [
+                'reactions' => implode(', ', $reactions->keys())
+            ]);
+
             return $this->redirect($this->buildLink('members', $user));
         }
 
-        return $this->view('XF:Members\Reaction\Delete', 'tc_mti_member_reaction_delete', ['user' => $user]);
+        return $this->view('XF:Members\Reaction\Delete', 'tc_mti_member_reaction_delete', [
+            'user' => $user
+        ]);
     }
 }

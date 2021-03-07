@@ -5,7 +5,6 @@
 
 namespace TC\MTI\XF\Entity
 {
-	class XFCP_Report extends \XF\Entity\Report {}
 	class XFCP_User extends \XF\Entity\User {}
 }
 

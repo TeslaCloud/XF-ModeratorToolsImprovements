@@ -1,8 +1,13 @@
 {
+    "public/alert_user_report_assign.html": {
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "d2ec804f1fadab52d32cbcd3f6bec62e"
+    },
     "public/tc_mti_inline_mod_assign.html": {
         "version_id": 2000070,
         "version_string": "2.0.0",
-        "hash": "0bfadad2e46cf3c256a88655f94f6f14"
+        "hash": "fc8ee45546c309588cd5e18ea67a58ee"
     },
     "public/tc_mti_member_avatar_delete.html": {
         "version_id": 2000070,
