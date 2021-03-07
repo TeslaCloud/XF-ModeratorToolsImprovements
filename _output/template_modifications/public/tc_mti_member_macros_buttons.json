@@ -1,0 +1,9 @@
+{
+    "template": "member_macros",
+    "description": "Buttons",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<!--[XF:moderator_menu:bottom]-->",
+    "replace": "<xf:if is=\"$xf.visitor.canDeleteAvatar()\">\n\t<a href=\"{{ link('members/avatar/delete', $user) }}\" class=\"menu-linkRow\" data-xf-click=\"overlay\">{{ phrase('tc_mti_delete_avatar') }}</a>\n</xf:if>\n<xf:if is=\"$xf.visitor.canDeleteBanner()\">\n\t<a href=\"{{ link('members/banner/delete', $user) }}\" class=\"menu-linkRow\" data-xf-click=\"overlay\">{{ phrase('tc_mti_delete_banner') }}</a>\n</xf:if>\n<xf:if is=\"$xf.visitor.canDiscourage()\">\n\t<xf:if is=\"$user.Option.is_discouraged\">\n\t\t<a href=\"{{ link('members/discourage', $user) }}\" class=\"menu-linkRow\" data-xf-click=\"overlay\">{{ phrase('tc_mti_undiscourage') }}</a>\n\t<xf:else />\n\t\t<a href=\"{{ link('members/discourage', $user) }}\" class=\"menu-linkRow\" data-xf-click=\"overlay\">{{ phrase('tc_mti_discourage') }}</a>\n\t</xf:if>\n</xf:if>\n<xf:if is=\"$xf.visitor.canDeleteUserReaction()\">\n\t<a href=\"{{ link('members/reaction/delete', $user) }}\" class=\"menu-linkRow\" data-xf-click=\"overlay\">{{ phrase('tc_mti_reaction_delete') }}</a>\n</xf:if>"
+}

@@ -1,0 +1,32 @@
+{
+    "public/tc_mti_inline_mod_assign.html": {
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "0bfadad2e46cf3c256a88655f94f6f14"
+    },
+    "public/tc_mti_member_avatar_delete.html": {
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "b7210ce101e4e357688a3ae9995e1feb"
+    },
+    "public/tc_mti_member_banner_delete.html": {
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "ef2796fbfcdf61ba474abb7392e1ee59"
+    },
+    "public/tc_mti_member_discourage.html": {
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "2292c58494b80aa7c2777314946915d4"
+    },
+    "public/tc_mti_member_reaction_delete.html": {
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "8620224fd3136c72d273006ba061cdba"
+    },
+    "public/tc_mti_post_reaction_delete.html": {
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "3b31a6b7ed631751f0dd3d67f80adefd"
+    }
+}

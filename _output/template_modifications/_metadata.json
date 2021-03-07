@@ -1,0 +1,17 @@
+{
+    "public/tc_mti_member_macros_buttons.json": {
+        "hash": "062e305e1e0c4e2fe5b1b6a26f31887c"
+    },
+    "public/tc_mti_reaction_list_url.json": {
+        "hash": "5f76e65a17103ff197fc20d7979ea7b7"
+    },
+    "public/tc_mti_report_list_closed_inline_moderation.json": {
+        "hash": "ebeed09a49459b77c1671f823af230e6"
+    },
+    "public/tc_mti_report_list_inline_moderation.json": {
+        "hash": "4f1aa2a51f79bcc8bf72cd0f46cf807e"
+    },
+    "public/tc_mti_report_list_macros_inline.json": {
+        "hash": "6a45c39e1f92a63a366f9670981720df"
+    }
+}

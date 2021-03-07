@@ -1,0 +1,22 @@
+<xf:form action="{{ link('inline-mod') }}" class="block" ajax="true">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:inforow rowtype="confirm">{{ phrase('tc_mti_you_sure_you_want_to_assign_x_reports_together', {'count': $total}) }}</xf:inforow>
+			
+			<xf:textboxrow name="user" ac="single" autocomplete="off" 
+						   label="{{ phrase('user') }}"
+						   maxlength="{{ max_length($xf.visitor, 'username') }}" />
+		</div>
+		<xf:submitrow icon="save" />
+	</div>
+
+	<xf:foreach loop="$reports" value="$report">
+		<xf:hiddenval name="ids[]">{$report.report_id}</xf:hiddenval>
+	</xf:foreach>
+
+	<xf:hiddenval name="type">report</xf:hiddenval>
+	<xf:hiddenval name="action">assign</xf:hiddenval>
+	<xf:hiddenval name="confirmed">1</xf:hiddenval>
+
+	<xf:redirect url="{$redirect}" />
+</xf:form>

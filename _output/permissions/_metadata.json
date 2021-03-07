@@ -1,0 +1,17 @@
+{
+    "forum-tcInlineModReport.json": {
+        "hash": "1682adecc42708d30c39e295d64dc8be"
+    },
+    "general-deleteAvatar.json": {
+        "hash": "bc79ba7ddc29e56f8162975b7bbeb4a5"
+    },
+    "general-deleteBanner.json": {
+        "hash": "8af03a1bd279d12db01584683a1d377d"
+    },
+    "general-deleteUserReaction.json": {
+        "hash": "e8a4160f2c4d9da4c1f5229be7cbb9b9"
+    },
+    "general-discourageUser.json": {
+        "hash": "96108f0cb4122e3704774ca113d272a2"
+    }
+}

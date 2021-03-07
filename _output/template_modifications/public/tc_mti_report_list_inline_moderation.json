@@ -1,0 +1,9 @@
+{
+    "template": "report_list",
+    "description": "Add inline moderation",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<div class=\"block\">\n\t<div class=\"block-outer\">\n\t\t<div class=\"block-outer-opposite\">\n\t\t\t<xf:button class=\"button--link menuTrigger\" data-xf-click=\"menu\" aria-expanded=\"false\" aria-haspopup=\"true\">{{ phrase('find_reports') }}</xf:button>\n\t\t\t<xf:macro template=\"report_list_macros\" name=\"search_menu\" />",
+    "replace": "<xf:if is=\"$canInlineMod\">\n\t<xf:js src=\"xf/inline_mod.js\" min=\"1\" />\n</xf:if>\n<div class=\"block\" data-xf-init=\"lightbox {{ $canInlineMod ? 'inline-mod' : '' }}\" data-type=\"report\" data-href=\"{{ link('inline-mod') }}\">\n\t<div class=\"block-outer\">\n\t\t<div class=\"block-outer-opposite\">\n\t\t\t<div class=\"buttonGroup\">\n\t\t\t\t<xf:if is=\"$canInlineMod\">\n\t\t\t\t\t<xf:macro template=\"inline_mod_macros\" name=\"button\" />\n\t\t\t\t</xf:if>\n\t\t\t\t<xf:button class=\"button--link menuTrigger\" data-xf-click=\"menu\" aria-expanded=\"false\" aria-haspopup=\"true\">{{ phrase('find_reports') }}</xf:button>\n\t\t\t\t<xf:macro template=\"report_list_macros\" name=\"search_menu\" />\n\t\t\t</div>"
+}

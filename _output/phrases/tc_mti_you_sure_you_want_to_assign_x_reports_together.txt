@@ -1,0 +1,1 @@
+You sure you want to assing {count} reports together

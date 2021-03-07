@@ -1,0 +1,15 @@
+<xf:title>{{ phrase('confirm_action') }}</xf:title>
+
+<xf:form action="{{ link('members/avatar/delete', $user) }}" ajax="true" class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:inforow rowtype="confirm">
+				{{ phrase('tc_mti_please_confirm_that_you_want_to_delete_avatar_this_user:') }}
+				<xf:if is="$user.user_id">
+					<strong><a href="{{ link('members', $user) }}">{$user.username}</a></strong>
+				</xf:if>
+			</xf:inforow>
+		</div>
+		<xf:submitrow rowtype="simple" icon="delete" />
+	</div>
+</xf:form>

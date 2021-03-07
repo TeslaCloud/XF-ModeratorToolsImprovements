@@ -1,0 +1,152 @@
+{
+    "permission.forum_tcInlineModReport.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "8f7b113d88787d0659a7c6be28232c0c"
+    },
+    "permission.general_deleteAvatar.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "b73a3f2a18d73c190cdc54181aff3820"
+    },
+    "permission.general_deleteBanner.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "88f927718fc0ca09661779ec1023e8ff"
+    },
+    "permission.general_deleteUserReaction.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "50eba7d5d6aaa644cb183b3451c63198"
+    },
+    "permission.general_discourageUser.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "71796778b9dfbcd71ce3f9f613c729c9"
+    },
+    "tc_mbi_assign_to.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "773ecc684d98231f8f23773727622446"
+    },
+    "tc_mti_confirm_that_you_want_to_discourage_this_user.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "5acc0f845d461507389cd230a6de54b0"
+    },
+    "tc_mti_confirm_that_you_want_to_undiscourage_this_user.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "989682c27241950af9848caf896da751"
+    },
+    "tc_mti_delete_avatar.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "66e0c9a8621d349a3397a4cde8824a24"
+    },
+    "tc_mti_delete_banner.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "ac98a15c4e63b94fefaa821a6ae09b42"
+    },
+    "tc_mti_discourage.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "e325995ed4f721681552379079344a36"
+    },
+    "tc_mti_end_date_time.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "cdf7b2dd6d4a4f91edd9301338389f74"
+    },
+    "tc_mti_please_confirm_that_you_want_to_delete_avatar_this_user.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "f86d09190858ba6c1504f73354a6cced"
+    },
+    "tc_mti_please_confirm_that_you_want_to_delete_banner_this_user.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "6434824050f4e23390b0ae34ec01bcc2"
+    },
+    "tc_mti_please_confirm_that_you_want_to_delete_this_reaction.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "5f567e1109c763807687117274b47b35"
+    },
+    "tc_mti_reaction_delete.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "9640c1fd25a41139c7a68e028e14e8b0"
+    },
+    "tc_mti_reactions_delete.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "f83ff6e3d01e0559e1f0291287741e4a"
+    },
+    "tc_mti_report_assing_to.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "94b2f7a1846a6ce8d37a7d82996718c3"
+    },
+    "tc_mti_report_resolve.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "05d26e7d7c53744b903ae1f6f8a8c7ed"
+    },
+    "tc_mti_report_unreject.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "4c4c6200981252fde43e0106ab3651f1"
+    },
+    "tc_mti_report_unresolve.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "5b3de0b5502319147da156f0bd28a769"
+    },
+    "tc_mti_start_date_time.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "9e6b8c0128c298461e5142065b460d86"
+    },
+    "tc_mti_undiscourage.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "438e963518c7eabc723d1c6d9a395050"
+    },
+    "tc_mti_you_cannot_discourage_yourself.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "fb813350c4065e3889bce05bd071da67"
+    },
+    "tc_mti_you_sure_you_want_to_assign_x_reports_together.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "c1732d43f56b6a43675d5e31e0b45d59"
+    }
+}
